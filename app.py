@@ -94,6 +94,29 @@ st.markdown('<div class="title">🌍 Urban Health AI</div>', unsafe_allow_html=T
 st.markdown('<div class="subtitle">Interactive AI health risk prediction system</div>', unsafe_allow_html=True)
 
 # ==================================================
+# 🔴 EXECUTIVE SUMMARY (INSIGHT FIRST)
+# ==================================================
+st.subheader("🧠 Executive Summary")
+
+col1, col2, col3 = st.columns(3)
+
+col1.metric(
+    "🚨 High Risk Cities",
+    df[df["health_risk"] == "HIGH"]["city"].nunique()
+)
+
+col2.metric(
+    "🌫 Avg PM2.5",
+    round(df["pm25"].mean(), 1)
+)
+
+col3.metric(
+    "📊 Avg AQI",
+    int(df["aqi"].mean())
+)
+
+
+# ==================================================
 # 🔵 SECTION 1 — EXISTING CITY (LEVEL 4 CONTINUED)
 # ==================================================
 st.subheader("🏙️ Existing City Monitoring")
@@ -168,10 +191,20 @@ st.pydeck_chart(
 )
 
 # ==================================================
+# 💡 KEY INSIGHTS
+# ==================================================
+st.subheader("💡 Key Insights")
+
+st.info("PM2.5 is the dominant contributor to HIGH health risk across all monitored cities.")
+st.warning("Low wind speed and high humidity conditions intensify pollution exposure.")
+st.success("Tier-2 cities show pollution levels approaching metro-city risk thresholds.")
+
+
+# ==================================================
 # 🔵 SECTION 2 — USER INPUT PREDICTION (LEVEL 5)
 # ==================================================
 st.markdown("<hr>", unsafe_allow_html=True)
-st.subheader("🧠 Predict Health Risk for ANY City (Manual Input)")
+st.subheader("🧠 Predict Health Risk for ANY City")
 
 with st.form("manual_prediction"):
     user_city = st.text_input("City Name (any city)")
@@ -203,3 +236,15 @@ if submitted:
 st.markdown("<hr>", unsafe_allow_html=True)
 st.subheader("📈 Pollution Trend (Selected City)")
 st.line_chart(city_df.set_index("day")[["pm25", "pm10"]])
+
+# ==================================================
+# 🧭 RECOMMENDED ACTIONS
+# ==================================================
+st.subheader("🧭 Recommended Actions")
+
+st.markdown("""
+- Prioritize PM2.5 emission controls in HIGH-risk cities  
+- Deploy early-warning alerts during low-wind conditions  
+- Expand continuous monitoring to Tier-2 urban regions  
+- Support healthcare preparedness in pollution hotspots  
+""")
