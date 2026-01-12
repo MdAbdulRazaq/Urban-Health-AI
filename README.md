@@ -1,63 +1,82 @@
-# 🌍 Urban Health AI
+# 🌍 Urban Health AI — Pollution-Based Health Risk Prediction
 
-Urban Health AI is an end-to-end machine learning system that predicts health risk levels in cities using air pollution and weather data.
-
-The project combines real-world environmental data, AQI calculation, machine learning, and an interactive dashboard deployed on the cloud.
+Urban Health AI is an end-to-end machine learning system that transforms air pollution and weather data into actionable public health insights for Indian cities.
 
 ---
 
 ## 🚀 Key Features
 
-- 📡 Pollution data ingestion (PM2.5, PM10, NO₂, SO₂, CO, O₃)
-- 🌦️ Weather data integration
-- 📊 AQI calculation using PM2.5 & PM10
-- 🧠 Machine Learning health risk prediction
-- 🗺️ Interactive India map with AQI-based coloring
-- ⏱️ Time-based pollution trend analysis
-- ✍️ Manual user input for predicting any city
-- ☁️ Cloud deployment with Streamlit
+- Real-world air pollution and weather data ingestion
+- AQI computation using PM2.5 and PM10 standards
+- Machine learning–based health risk classification
+- Interactive Streamlit dashboard with:
+  - City-wise monitoring
+  - Time-based pollution trends
+  - India-wide AQI map visualization
+  - Manual prediction for any city
+- Cloud deployment with secure configuration
 
 ---
 
-## 🧠 Tech Stack
+## 🧠 Technology Stack
 
-- **Language:** Python  
-- **Data Processing:** Pandas, NumPy  
-- **Machine Learning:** Scikit-learn  
-- **Dashboard:** Streamlit  
-- **Visualization:** PyDeck  
-- **APIs:** OpenAQ, Weather APIs  
-
----
-
-## 📊 Dashboard Capabilities
-
-- Select a city and view pollution metrics
-- See AQI classification and health risk
-- Visualize pollution trends over time
-- Explore AQI on an interactive India map
-- Enter custom data to predict health risk for any city
+**Programming:** Python  
+**Data Processing:** Pandas, NumPy  
+**Machine Learning:** Scikit-learn (Random Forest)  
+**Visualization:** Streamlit, PyDeck  
+**APIs:** OpenAQ, OpenWeather  
+**Deployment:** GitHub, Streamlit Cloud  
 
 ---
 
-## 🏥 Health Risk Categories
+## 📊 Use Cases
 
-- 🟢 LOW  
-- 🟡 MODERATE  
-- 🔴 HIGH  
-
-Predictions are generated using a trained machine learning model.
+- Urban public health monitoring  
+- Air pollution impact analysis  
+- Healthcare preparedness planning  
+- Environmental policy support  
 
 ---
 
-## ▶️ Run Locally
+## 🌐 Live Application
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
+🔗 **Live Demo:**  
+https://urban-health-ai-6c99xodfe3gofwcac5btzh.streamlit.app/
+
+---
+
+## 🧩 Project Architecture
+
+Urban Health AI/
+├── app.py # Streamlit dashboard
+├── data/
+│ ├── raw/ # Raw pollution & weather data
+│ └── processed/ # ML-ready datasets
+├── models/
+│ ├── health_ai.pkl # Trained ML model
+│ └── label_encoder.pkl
+├── src/
+│ ├── pollution.py # Pollution data ingestion
+│ ├── weather.py # Weather data ingestion
+│ ├── process.py # Data merging & labeling
+│ ├── prepare_ml_data.py # Feature preparation
+│ ├── train.py # Model training
+│ └── aqi.py # AQI calculation logic
+├── requirements.txt
+└── README.md
 
 
-👤 Author
+---
 
-Abdul Razaq
-Final Year B.Tech — Computer Science Engineering (Data Science)
+## ⚠️ Important Note
+
+This project is **insight-driven**, not dataset-driven.  
+The focus is on converting environmental data into **decision-ready health intelligence**, similar to real-world data science systems.
+
+---
+
+## 👤 Author
+
+**Md Abdul Razaq**  
+B.Tech CSE (Data Science)  
+Urban Health AI — 2026
