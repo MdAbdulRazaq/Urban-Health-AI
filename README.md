@@ -22,23 +22,23 @@ Urban populations are increasingly exposed to hazardous air quality, yet decisio
 
 Most available data remains:
 
-Fragmented across multiple sources
+- Fragmented across multiple sources
 
-Difficult to interpret for non-technical stakeholders
+- Difficult to interpret for non-technical stakeholders
 
-Static, with limited real-time or predictive insight
+- Static, with limited real-time or predictive insight
 
-Urban Health AI addresses this gap by converting raw environmental data into interpretable health-risk signals that can support planning, preparedness, and policy discussions.
+- Urban Health AI addresses this gap by converting raw environmental data into interpretable health-risk signals that can support planning, preparedness, and policy discussions.
 
 This project answers:
 
-Which cities face the highest health risk today?
+- Which cities face the highest health risk today?
 
-How does air quality evolve over time?
+- How does air quality evolve over time?
 
-Can health risk be predicted for cities with limited historical data?
+- Can health risk be predicted for cities with limited historical data?
 
-How can such a system operate reliably in production?
+- How can such a system operate reliably in production?
 
 ---
 
