@@ -1,82 +1,121 @@
-# 🌍 Urban Health AI — Pollution-Based Health Risk Prediction
+# 🌍 Urban Health AI  
+**AI-powered Urban Pollution & Health Risk Intelligence System**
 
-Urban Health AI is an end-to-end machine learning system that transforms air pollution and weather data into actionable public health insights for Indian cities.
-
----
-
-## 🚀 Key Features
-
-- Real-world air pollution and weather data ingestion
-- AQI computation using PM2.5 and PM10 standards
-- Machine learning–based health risk classification
-- Interactive Streamlit dashboard with:
-  - City-wise monitoring
-  - Time-based pollution trends
-  - India-wide AQI map visualization
-  - Manual prediction for any city
-- Cloud deployment with secure configuration
+🔗 **Live Dashboard:** https://urban-health-ai-6c99xodfe3gofwcac5btzh.streamlit.app/  
+📂 **Tech Stack:** Python, Pandas, Scikit-learn, APIs, Streamlit, Git, Cloud  
 
 ---
 
-## 🧠 Technology Stack
+## 📌 Problem Statement
+Urban air pollution is a growing public health concern in Indian cities.  
+While pollution data exists, **decision-makers lack actionable insights** that connect pollution levels with **health risk outcomes**.
 
-**Programming:** Python  
-**Data Processing:** Pandas, NumPy  
-**Machine Learning:** Scikit-learn (Random Forest)  
-**Visualization:** Streamlit, PyDeck  
-**APIs:** OpenAQ, OpenWeather  
-**Deployment:** GitHub, Streamlit Cloud  
-
----
-
-## 📊 Use Cases
-
-- Urban public health monitoring  
-- Air pollution impact analysis  
-- Healthcare preparedness planning  
-- Environmental policy support  
+Most datasets remain:
+- Fragmented (weather ≠ pollution ≠ health)
+- Static (CSV-level analysis)
+- Non-interactive (no real-time interpretation)
 
 ---
 
-## 🌐 Live Application
-
-🔗 **Live Demo:**  
-https://urban-health-ai-6c99xodfe3gofwcac5btzh.streamlit.app/
-
----
-
-## 🧩 Project Architecture
-
-Urban Health AI/
-├── app.py # Streamlit dashboard
-├── data/
-│ ├── raw/ # Raw pollution & weather data
-│ └── processed/ # ML-ready datasets
-├── models/
-│ ├── health_ai.pkl # Trained ML model
-│ └── label_encoder.pkl
-├── src/
-│ ├── pollution.py # Pollution data ingestion
-│ ├── weather.py # Weather data ingestion
-│ ├── process.py # Data merging & labeling
-│ ├── prepare_ml_data.py # Feature preparation
-│ ├── train.py # Model training
-│ └── aqi.py # AQI calculation logic
-├── requirements.txt
-└── README.md
-
+## 🎯 Objective
+Build an **end-to-end system** that:
+- Collects live pollution & weather data
+- Converts raw data into health risk signals
+- Predicts health risk using Machine Learning
+- Presents insights through an interactive dashboard
+- Is deployable and publicly accessible
 
 ---
 
-## ⚠️ Important Note
+## 🏗️ System Architecture
+APIs (Pollution + Weather)
+↓
+Data Cleaning & Feature Engineering
+↓
+AQI Computation
+↓
+ML Health Risk Model
+↓
+Interactive Dashboard (Streamlit)
+↓
+Cloud Deployment
 
-This project is **insight-driven**, not dataset-driven.  
-The focus is on converting environmental data into **decision-ready health intelligence**, similar to real-world data science systems.
+---
+
+## 📊 Data Sources
+- **Air Pollution:** OpenAQ API  
+- **Weather:** OpenWeather API  
+- **Cities Covered:** Delhi, Noida, Ghaziabad, Gurgaon, Kanpur  
+
+Features include:
+- PM2.5, PM10, NO₂, SO₂, CO
+- Temperature, Humidity, Pressure, Wind Speed
+- Latitude & Longitude (for spatial analysis)
+
+---
+
+## ⚙️ Feature Engineering
+- Computed **AQI** using PM2.5 & PM10 breakpoints
+- Standardized feature names to avoid model drift
+- Handled missing values & inconsistent API responses
+- Created time-indexed records for trend analysis
+
+---
+
+## 🤖 Machine Learning Model
+- **Model:** Random Forest Classifier
+- **Target:** Health Risk (LOW / MODERATE / HIGH)
+- **Input Features:** Pollution + Weather + AQI
+- **Reason:** Robust to non-linearity and noisy environmental data
+
+---
+
+## 📈 Key Metrics & KPIs
+| Metric | Insight |
+|------|--------|
+| Avg PM2.5 | Consistently above WHO safe limits |
+| Avg AQI | Majority cities fall in HIGH category |
+| High-Risk Cities | 100% of monitored cities |
+| Dominant Factor | PM2.5 strongest contributor |
+| Trend | Pollution spikes during low wind |
+
+---
+
+## 🧠 Insights Generated
+- PM2.5 is the **primary driver** of health risk
+- Low wind speed increases pollution retention
+- Tier-2 cities show risk levels close to metros
+- Weather conditions amplify pollution impact
+
+---
+
+## 🗺️ Dashboard Capabilities
+- City-wise AQI & pollution monitoring
+- Time slider to observe pollution trends
+- Interactive India map with AQI heat points
+- AI-based health risk prediction
+- Manual input for any city (what-if analysis)
+
+---
+
+## 🚀 Deployment
+- Hosted on **Streamlit Cloud**
+- CI-ready repository
+- Secure environment variables
+- Public access for recruiters & stakeholders
+
+---
+
+## 🧩 Challenges Solved
+- API version deprecations (OpenAQ v1 → v3)
+- Feature mismatch between training & inference
+- Real-time deployment bugs
+- Cloud dependency resolution
 
 ---
 
 ## 👤 Author
-
-**Md Abdul Razaq**  
-B.Tech CSE (Data Science)  
-Urban Health AI — 2026
+**MD ABDUL RAZAQ**  
+B.Tech (CSE – Data Science)  
+4th Year - 8th Semester
+Noida International University
