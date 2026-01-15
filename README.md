@@ -22,29 +22,28 @@ Urban populations are increasingly exposed to hazardous air quality, yet decisio
 
 Most available data remains:
 
-Fragmented across multiple sources
+- Fragmented across multiple sources
 
-Difficult to interpret for non-technical stakeholders
+- Difficult to interpret for non-technical stakeholders
 
-Static, with limited real-time or predictive insight
+- Static, with limited real-time or predictive insight
 
 Urban Health AI addresses this gap by converting raw environmental data into interpretable health-risk signals that can support planning, preparedness, and policy discussions.
 
 This project answers:
 
-Which cities face the highest health risk today?
+- Which cities face the highest health risk today?
 
-How does air quality evolve over time?
+- How does air quality evolve over time?
 
-Can health risk be predicted for cities with limited historical data?
+- Can health risk be predicted for cities with limited historical data?
 
-How can such a system operate reliably in production?
+- How can such a system operate reliably in production?
 
 ---
 
 ## 🧠 Solution Architecture
 High-Level Pipeline
-
 
 External APIs → Pollution & Weather data ingestion
 
@@ -61,6 +60,15 @@ Interactive visualization via Streamlit
 Cloud deployment for public accessibility
 
 This modular architecture allows each stage to be debugged, scaled, or upgraded independently.
+
+---
+
+## 📐 System Design Documentation
+
+This document explains the end-to-end system design, data pipelines, feature contracts, ML constraints, and production trade-offs.
+
+📄 **PDF:**  
+[Urban Health AI — Module Design Documentation](docs/Urban%20Health%20AI%20Module%20Design%20Documentation.pdf)
 
 ---
 
@@ -83,7 +91,7 @@ Low wind speed combined with high humidity amplifies pollution exposure
 
 Several Tier-2 cities exhibit pollution severity approaching metro-level risk
 
-These insights shift the conversation from “raw pollution numbers” to health-oriented decision intelligence.
+These insights shift the conversation from "raw pollution numbers" to health-oriented decision intelligence.
 
 ---
 
@@ -194,19 +202,19 @@ Outcome:
 ## 🧠 Engineering Decisions & Trade-offs
 
 API failures:
-Handled through status validation, defensive parsing, and fault-tolerant logic.
+- Handled through status validation, defensive parsing, and fault-tolerant logic.
 
 Model stability:
-Ensured via locked feature schemas using feature_names_in_.
+- Ensured via locked feature schemas using feature_names_in_.
 
 Deployment debugging:
-Resolved by aligning local and cloud environments and refining dependencies.
+- Resolved by aligning local and cloud environments and refining dependencies.
 
 Production readiness:
-Achieved through schema validation, secure secrets, and reproducible pipelines.
+- Achieved through schema validation, secure secrets, and reproducible pipelines.
 
 Next improvements:
-Data expansion over time, automated retraining, API caching, and alerting systems.
+- Data expansion over time, automated retraining, API caching, and alerting systems.
 
 ---
 
@@ -247,6 +255,6 @@ It represents end-to-end ownership — from data ingestion and debugging to depl
 
 ## 👤 Author
 **MD ABDUL RAZAQ**  
-B.Tech (CSE – Data Science)  
+Bachelor in Technology (Computer Science Engineering – Data Science)  
 4th Year - 8th Semester
 Noida International University
