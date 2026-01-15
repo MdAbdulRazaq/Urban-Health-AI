@@ -63,6 +63,15 @@ This modular architecture allows each stage to be debugged, scaled, or upgraded 
 
 ---
 
+## 📐 System Design Documentation
+
+This document explains the end-to-end system design, data pipelines, feature contracts, ML constraints, and production trade-offs.
+
+📄 **PDF:**  
+[Urban Health AI — Module Design Documentation](docs/Urban_Health_AI_Module_Design_Documentation.pdf)
+
+---
+
 ## 📊 Key Metrics & KPIs (Analyst-Grade)
 
 Metric	Insight
